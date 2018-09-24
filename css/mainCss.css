@@ -47,6 +47,11 @@ a {
   text-decoration: none;
 }
 
+a:hover{
+  color: #6DB806;
+  transition: 0.5s;
+}
+
 /* #########################
 ########### HEADER #########
 ############################ */
@@ -83,21 +88,23 @@ header #social-media {
 
 .splash {
   height: 43em;
-  background: url("../img/splash-hand-trans-2.png") no-repeat, radial-gradient(circle at right, #f4f7fc, #979da8 );
+  background: url("../img/splash-hand-trans-2.png") no-repeat, radial-gradient(circle at right, #EEE, #979da8 );
   background-position: 110% 1000%;
 
 }
 
 .splash-container-and-hand {
   display: flex;
-  min-height: 100%;
+  min-height: 75%;
+  align-items: center;
 
 }
 .splash-container {
   height: 12em;
   display: flex;
   flex-direction: column;
-  padding: 10em;
+  width: 100%;
+  padding-left: 10em;
   /* top: 10em;
   left: 5em; */
 }
@@ -107,6 +114,7 @@ header #social-media {
   font-weight: 700;
   padding: 0;
   margin: 0;
+  width: 90%;
 }
 
 .splash-container h1{
@@ -114,6 +122,7 @@ header #social-media {
   font-weight: 300;
   padding: 0;
   margin: 0;
+  width: 90%;
 }
 
 .splash-container h3{
@@ -121,6 +130,7 @@ header #social-media {
   font-weight: 300;
   padding: 0;
   margin: 0.5em 0;
+  width: 90%;
 }
 
 #button-package{
@@ -143,6 +153,11 @@ header #social-media {
   border-radius: 0.5em;
   align-items: center;
   justify-content: space-between;
+}
+
+#splash-green-button:hover {
+  background: #000;
+  transition: 0.5s;
 }
 
 #splash-green-button-left {
@@ -254,11 +269,27 @@ header #social-media {
   justify-content: space-between;
 }
 
+.item-box-head-button:hover {
+  background-color: #000000 ;
+  transition: 0.5s;
+}
+
+.blue-button {
+  background-color: #498CC0;
+}
+
+.blue-button:hover {
+  background: #000000;
+  transition: 0.5s;
+}
+
 .item-box-head-button p {
   font-size: 0.8em;
   font-weight: 700;
   margin: 0 auto;
 }
+
+
 
 
 /* #############################
@@ -282,12 +313,16 @@ header #social-media {
   font-size: 2em;
   margin: 0;
   padding-bottom: 0.2em;
+  width: 90%;
+  text-align: center;
 }
 
 .dribble-ad h3{
   color: #999999;
   margin: 0;
   padding-bottom: 3em;
+  width: 90%;
+  text-align: center;
 }
 
 .dribble-button {
@@ -297,18 +332,23 @@ header #social-media {
   border-radius: 5px;
 }
 
+.dribble-button:hover {
+  background-color: #000000;
+  transition: 0.5s;
+}
+
 .dribble-text {
   display: flex;
   justify-content: space-around;
   text-align: center;
-  margin:1em 1.3em;
+  margin: 1em 1.3em;
 }
 
 .dribble-text i {
   font-size: 1.5em;
   color: #ff4dff;
   font-weight: 700;
-  margin:0;
+  margin-top:-0.2em;
   padding:0;
 }
 
@@ -345,7 +385,7 @@ header #social-media {
 
 
 /* #############################
-############ customer-email ###########
+######## CUSTOMER EMAIL ########
 ################################ */
 
 
@@ -359,16 +399,22 @@ header #social-media {
   align-items: center;
   border-bottom: solid #6E7075 2px;
 }
+.customer-email-text {
+  display:  flex;
+  flex-direction: column;
+  text-align: center;
+}
 
 .customer-email-text h1 {
   font-size: 2.4em;
   padding-bottom: 0.2em;
   margin: 0;
+  width: 100%
 }
 .customer-email-text h3 {
   margin-top: -0.2em;
   color: #6E7075;
-  padding-left: 3em;
+  width: 100%
 }
 
 .customer-email form{
@@ -395,6 +441,11 @@ header #social-media {
   width: 12em;
   border: none;
   font-weight: 700;
+}
+
+[type="submit"]:hover  {
+  background: #000;
+  transition: 0.5s;
 }
 
 
@@ -426,6 +477,7 @@ footer {
 
 .footer-top-left {
   width: 35%;
+  padding-right: 1em;
 }
 
 .footer-top-left p{
@@ -441,6 +493,7 @@ footer {
   width: 35%;
   justify-content: center;
   align-content: center;
+  padding-left: 1em;
 }
 
 .footer-pic {
@@ -474,6 +527,12 @@ footer {
   width: 40%;
   justify-content: space-around;
   align-items: center;
+  font-size: 0.8em;
+}
+
+.footer-links a {
+  padding: 0.5em;
+  text-align: center;
 }
 
 
@@ -493,14 +552,24 @@ footer {
   }
 }
 
-@media (max-width: 1129px) {
+@media (max-width: 1131px) {
   .splash {
-    background: radial-gradient(circle at right, #f4f7fc, #979da8 );
-
+    background: radial-gradient(circle at right, #EEE, #979da8 );
   }
 
   .gallery {
     height: 52em;
+  }
+
+  .customer-email form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  [type=submit] {
+    margin-top: 2em;
+
   }
 }
 
@@ -512,11 +581,27 @@ footer {
 
 @media (max-width: 865px) {
 
+  #splash-green-button {
+    text-align: center;
+    padding-left: 2em;
+  }
+
+  #splash-green-button-left {
+    display: none;
+  }
+
+  #splash-package {
+    display: none;
+  }
+
   header {
     padding: 0 2em;
     display: flex;
   }
 
+  .splash-container {
+    padding-left: 2em;
+  }
   #shares {
     display: none;
   }
@@ -530,39 +615,89 @@ footer {
   }
 
   .customer-email {
-    height: 45em;
+    height: 35em;
+  }
+
+  .customer-email-text {
+    width: 90%
+  }
+
+  [type="email"] {
+    width: 16em;
   }
 
   footer {
-    height: 65em;
+    height: 80em;
+    flex-direction: column;
+    justify-content: space-around;
   }
 
   .footer-top {
     flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
   }
 
   .footer-top-left {
     width: 85%;
-    margin-top: -15em;
-    margin-bottom: 10em;
+    margin-top: 10em;
+    margin-bottom: 15em;
     padding: 0;
   }
 
   .footer-top-right {
     flex-wrap: wrap;
-    width: 50%
+    width: 80%;
+  }
+
+  .footer-bot {
+    margin-top: 30em;
+  }
+
+  .footer-copyright {
+    display: none;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
   }
 }
 
 
-@media (max-width: 566px) {
+@media (max-width: 568px) {
+  #splash-green-button{
+    width: 12em;
+  }
+
   .gallery {
     height: 130em;
   }
+
+
 }
 
 @media (max-width: 375px) {
+  header #logo i{
+    font-size: 1em;
+  }
+
+  header #social-media p {
+    display: none;
+  }
+
   .footer-top-left {
     margin-bottom: 15em;
   }
+
+  #dribble-hide {
+    display: none;
+  }
+
+  .dribble-button {
+    width: 90%;
+  }
+
+
 }
